@@ -15,23 +15,23 @@ function Logo() {
 
 function MiddleNav() {
   return (
-    <ul className="flex flex-row">
-      {routes.map((route) => {
-        const replaceSyntax = route.replace("/", "");
-        return (
-          <Nav
-            key={route}
-            link={route}
-            title={
-              route === "/"
-                ? "Home"
-                : replaceSyntax.charAt(0).toUpperCase() + replaceSyntax.slice(1)
-            }
-            isActive={window.location.pathname === route ? true : false}
-          />
-        );
-      })}
-    </ul>
+      <ul className="flex flex-row">
+        {routes.map((route) => {
+          const replaceSyntax = route.replace("/", "");
+          return (
+            <Nav
+              key={route}
+              link={route}
+              title={
+                route === "/"
+                  ? "Home"
+                  : replaceSyntax.charAt(0).toUpperCase() + replaceSyntax.slice(1)
+              }
+              isActive={window.location.pathname === route ? true : false}
+            />
+          );
+        })}
+      </ul>
   );
 }
 

@@ -1,14 +1,8 @@
 import { useState } from "react";
 
 function Box(props: any) {
-  const [isHover, setIsHover] = useState(false);
-
   return (
-    <div
-      onMouseEnter={() => setIsHover(true)}
-      onMouseLeave={() => setIsHover(false)}
-      className={`flex flex-col transition-all hover:scale-110 ${isHover ? "" : ""}`}
-    >
+    <div className="flex flex-col mb-5 transition-all hover:scale-110">
       <img
         className="w-16 absolute blur-sm rounded-full"
         src={props.link}
@@ -16,7 +10,7 @@ function Box(props: any) {
       />
       <img
         className="w-14 relative z-10 top-1 left-1 rounded-full"
-        alt="box"
+        alt=""
         src={props.link}
       />
       <div className="mt-6 mr-5">
@@ -27,6 +21,7 @@ function Box(props: any) {
   );
 }
 
+/*
 function WideBox(props: any) {
   return (
     <div className="flex flex-row items-start">
@@ -35,6 +30,24 @@ function WideBox(props: any) {
         <h1 className="text-white pb-3 font-bold">{props.title}</h1>
         <p className="text-gray-400">{props.content}</p>
       </div>
+    </div>
+  );
+}
+*/
+
+function TwoBox(props: any) {
+  return (
+    <div className="flex flex-col content-between">
+      <Box
+        link="https://picsum.photos/600"
+        title="Fast Performance"
+        content="Get your blood tests delivered at home collect a sample from the your blood tests."
+      />
+      <Box
+        link="https://picsum.photos/700"
+        title="Partnership deal"
+        content="Get your blood tests delivered at home collect a sample from the your blood tests."
+      />
     </div>
   );
 }
@@ -66,4 +79,35 @@ function FourBox(props: any) {
   );
 }
 
-export default FourBox;
+function TwoByTwo(props: any) {
+  return (
+    <div>
+      <div className="flex flex-row content-between">
+        <Box
+          link="https://picsum.photos/200"
+          title="Fast Performance"
+          content="Get your blood tests delivered at home collect a sample from the your blood tests."
+        />
+        <Box
+          link="https://picsum.photos/300"
+          title="Partnership deal"
+          content="Get your blood tests delivered at home collect a sample from the your blood tests."
+        />
+      </div>
+      <div className="flex flex-row content-between">
+        <Box
+          link="https://picsum.photos/200"
+          title="Fast Performance"
+          content="Get your blood tests delivered at home collect a sample from the your blood tests."
+        />
+        <Box
+          link="https://picsum.photos/300"
+          title="Partnership deal"
+          content="Get your blood tests delivered at home collect a sample from the your blood tests."
+        />
+      </div>
+    </div>
+  );
+}
+
+export { FourBox, TwoBox, TwoByTwo };

@@ -2,7 +2,7 @@ import React from 'react'
 
 function Heading(props: any) {
   return (
-    <div className="flex flex-col m-10">
+    <div className={`flex flex-col ${!props.onLeft ? "m-10" : "mb-5"}`}>
       <h2
         className={`text-lgreen mb-4 ${!props.onLeft ? "text-center" : "text-left"}`}
       >

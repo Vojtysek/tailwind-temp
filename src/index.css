@@ -16,7 +16,7 @@ body {
   justify-content: center;
   background-image: url(./images/pattern.svg),linear-gradient(to bottom,rgba(83, 71, 71, 0.15),transparent);
   background-repeat: repeat;
-  background-size: 4px 4px,100vw 200vh,100vw 200vh;
+  background-size: 4px 4px,100vw 400vh,100vw 400vh;
   scroll-behavior: smooth;
 }
 
@@ -29,7 +29,6 @@ code {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
   width: 80vw;
 }
 
