@@ -35,3 +35,9 @@ code {
 span{
   color: #15DE8A;
 }
+
+#border-green {
+  border: 5px solid;
+  border-image-source: radial-gradient(circle at top left, #15DE8A, transparent 50%);
+  border-image-slice: 1;
+}
